@@ -25,4 +25,20 @@ collections:
         time_format: "HH:mm" # e.g. 21:07
         format: "LLL"
         picker_utc: false
+  - name: "project"
+    label: "Project"
+    folder: "static/projects"
+    create: true
+    fields:
+      - { label: "Slug", name: "slug", widget: "string"}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Featured Image"
+        name: "thumbnail"
+        widget: "image"
+        default: ""
+        media_library:
+          config:
+            multiple: true
+
 
