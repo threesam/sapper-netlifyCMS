@@ -25,6 +25,13 @@ collections:
         time_format: "HH:mm" # e.g. 21:07
         format: "LLL"
         picker_utc: false
+      - label: "Tags"
+        name: "tags"
+        widget: "relation"
+        collection: "tag"
+        search_fields: ["title"]
+        value_fields: ["title", "description"]
+        multiple: true
   - name: "project"
     label: "Project"
     folder: "static/projects"
@@ -33,6 +40,20 @@ collections:
       - { label: "Slug", name: "slug", widget: "string"}
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Featured Image"
+        name: "thumbnail"
+        widget: "image"
+        default: ""
+        media_library:
+          config:
+            multiple: true
+  - name: "tag"
+    label: "Tag"
+    folder: "static/tags"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "markdown" }
       - label: "Featured Image"
         name: "thumbnail"
         widget: "image"
