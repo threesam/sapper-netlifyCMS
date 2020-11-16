@@ -52,6 +52,7 @@ collections:
     folder: "static/tags"
     create: true
     fields:
+      - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "markdown" }
       - label: "Featured Image"
