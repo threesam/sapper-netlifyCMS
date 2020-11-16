@@ -1,5 +1,6 @@
 <script>
 	import Nav from '../components/Nav.svelte';
+	import Footer from '../components/Footer.svelte';
 
 	export let segment;
 </script>
@@ -8,8 +9,8 @@
 	main {
 		position: relative;
 		max-width: 56em;
+		min-height: calc(100vh - 2* var(--nav-height));
 		background-color: white;
-		padding: 2em;
 		margin: 0 auto;
 		box-sizing: border-box;
 	}
@@ -20,3 +21,5 @@
 <main>
 	<slot></slot>
 </main>
+
+<Footer {segment}/>
