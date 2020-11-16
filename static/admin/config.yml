@@ -25,13 +25,13 @@ collections:
         time_format: "HH:mm" # e.g. 21:07
         format: "LLL"
         picker_utc: false
-      - label: "Tags"
-        name: "tags"
-        widget: "relation"
-        collection: "tag"
-        search_fields: ["title"]
-        value_fields: ["title", "description"]
-        multiple: true
+      # - label: "Tags"
+      #   name: "tags"
+      #   widget: "relation"
+      #   collection: "tag"
+      #   search_fields: ["title"]
+      #   value_fields: ["title", "description"]
+      #   multiple: true
   - name: "project"
     label: "Project"
     folder: "static/projects"
