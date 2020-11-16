@@ -19,6 +19,7 @@ ul {
 	margin: 0 auto;
 	justify-content: left;
 	align-items: center;
+	padding: 0 2rem;
 	gap: 1rem;
 }
 </style>

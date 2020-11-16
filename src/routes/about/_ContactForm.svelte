@@ -5,7 +5,6 @@
 		padding: var(--nav-height);
 	}
 	div {
-		height: 100%;
 		width: 100%;
 		background: #eee;
 		padding: 2rem;
@@ -46,9 +45,7 @@
 			<p>
 				<label>Message<textarea name="message"></textarea></label>
 			</p>
-			<p>
 				<button type="submit">Send</button>
-			</p>
 		</form>
 		
 	</div>
