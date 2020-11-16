@@ -3,7 +3,8 @@ slug: sam
 name: Sam
 image:
   thumbnail: /uploads/brooklynme.jpg
-  alt: man standing in front of NY skyline
+  alt: man standing
+Resume: /uploads/salvatore_sam_dangelo_resume.pdf
 ---
 My name is Salvatore D'Angelo III but everyone calls me Sam. I grew up in Trenton, NJ. Graduated with a double major in PolySci and Global Studies from [Rider University](https://rider.edu) just in time to realize that I liked the theory of politics a lot more than the practice. So I thought...might as well go play some music.
 
