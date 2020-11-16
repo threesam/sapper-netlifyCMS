@@ -70,9 +70,9 @@ collections:
         name: "contributorReference"
         widget: "relation"
         collection: "contributor"
-        search_fields: ["name"]
-        value_field: "name"
-        display_fields: ["name"]
+        search_fields: ["title"]
+        value_field: "title"
+        display_fields: ["title"]
       - label: "Tag"
         name: "tag"
         widget: "relation"
