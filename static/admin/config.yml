@@ -31,7 +31,14 @@ collections:
         collection: "tags"
         search_fields: ["title"]
         value_field: "title"
-        display_fields: ["title", "description"]
+        display_fields: ["thumbnail", "title"]
+      - label: "Project"
+        name: "projects"
+        widget: "relation"
+        collection: "project"
+        search_fields: ["title"]
+        value_field: "title"
+        display_fields: ["thumbnail", "title"]
   - name: "project"
     label: "Project"
     folder: "static/projects"
@@ -47,6 +54,13 @@ collections:
         media_library:
           config:
             multiple: true
+      - label: "Tag"
+        name: "tag"
+        widget: "relation"
+        collection: "tags"
+        search_fields: ["title"]
+        value_field: "title"
+        display_fields: ["thumbnail", "title"]
   - name: "tags"
     label: "Tags"
     folder: "static/tags"
@@ -62,5 +76,3 @@ collections:
         media_library:
           config:
             multiple: true
-
-
