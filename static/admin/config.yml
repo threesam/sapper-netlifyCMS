@@ -9,6 +9,7 @@ media_folder: static/uploads # Media files will be stored in the repo under stat
 public_folder: /uploads # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
+# contributors
   - name: "contributor"
     label: "Contributor"
     folder: 'static/contributors'
@@ -36,7 +37,7 @@ collections:
         media_library:
           config:
             multiple: false
-
+# posts
   - name: "post" # Used in routes, e.g., /admin/collections/blog
     label: "Blog Post" # Used in the UI
     folder: "static/posts" # The path to the folder where our blog posts are stored
@@ -67,6 +68,7 @@ collections:
         search_fields: ["title"]
         value_field: "title"
         display_fields: ["thumbnail", "title"]
+# projects
   - name: "project"
     label: "Project"
     folder: "static/projects"
@@ -96,6 +98,7 @@ collections:
         search_fields: ["title"]
         value_field: "title"
         display_fields: ["thumbnail", "title"]
+# tags
   - name: "tags"
     label: "Tags"
     folder: "static/tags"
