@@ -51,14 +51,21 @@
 	.content :global(li) {
 		margin: 0 0 0.5em 0;
 	}
+
+	article {
+		padding: 2rem;
+	}
 </style>
 
 <svelte:head>
 	<title>{post.title}</title>
 </svelte:head>
 
-<h1>{post.title}</h1>
-
-<div class="content">
-	{@html post.html}
-</div>
+<article>
+	<h1>{post.title}</h1>
+	
+	<div class="content">
+		{@html post.html}
+	</div>
+</article>
+	
