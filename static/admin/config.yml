@@ -9,6 +9,27 @@ media_folder: static/uploads # Media files will be stored in the repo under stat
 public_folder: /uploads # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
+  - name: "contributor"
+    label: "Contributor"
+    folder: 'static/contributors'
+    create: true
+    fields:
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Image"
+        name: "image"
+        widget: "object"
+        fields:
+        - label: "Thumbnail"
+          name: "thumbnail"
+          widget: "image"
+          default: "/uploads/chocolate-dogecoin.jpg"
+          media_library:
+            config:
+              multiple: true
+        - { label: "Alt", name: "alt", widget: "string" }
+
   - name: "post" # Used in routes, e.g., /admin/collections/blog
     label: "Blog Post" # Used in the UI
     folder: "static/posts" # The path to the folder where our blog posts are stored
@@ -25,17 +46,17 @@ collections:
         time_format: "HH:mm" # e.g. 21:07
         format: "LLL"
         picker_utc: false
+      - label: "Contributor Reference"
+        name: "contributorReference"
+        widget: "relation"
+        collection: "contributor"
+        search_fields: ["name"]
+        value_field: "name"
+        display_fields: ["image.thumbnail", "name"]
       - label: "Tag"
         name: "tag"
         widget: "relation"
         collection: "tags"
-        search_fields: ["title"]
-        value_field: "title"
-        display_fields: ["thumbnail", "title"]
-      - label: "Project"
-        name: "projects"
-        widget: "relation"
-        collection: "project"
         search_fields: ["title"]
         value_field: "title"
         display_fields: ["thumbnail", "title"]
@@ -54,6 +75,13 @@ collections:
         media_library:
           config:
             multiple: true
+      - label: "Contributor Reference"
+        name: "contributorReference"
+        widget: "relation"
+        collection: "contributor"
+        search_fields: ["name"]
+        value_field: "name"
+        display_fields: ["image.thumbnail", "name"]
       - label: "Tag"
         name: "tag"
         widget: "relation"
