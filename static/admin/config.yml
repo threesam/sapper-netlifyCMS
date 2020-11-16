@@ -21,7 +21,7 @@ collections:
     create: true
     fields:
       - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
       - label: "Image"
         name: "image"
         widget: "object"
