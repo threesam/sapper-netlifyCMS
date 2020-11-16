@@ -21,14 +21,15 @@
 		height: calc(100vh - var(--nav-height));
 		padding: 2rem;
 	}
-	p {
-		margin-bottom: 1rem;
+	img {
+		max-width: 100%;
 	}
 </style>
 
 <section>
-	<h1>About <b></b></h1>
+	<h1>About <b>{contributors[0].title}</b></h1>
 
+	<img src="{contributors[0].image.thumbnail}" alt="{contributors[0].alt}">
 </section>
 
 <section>

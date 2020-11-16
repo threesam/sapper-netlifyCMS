@@ -5,11 +5,11 @@ import grayMatter from "gray-matter"
 const getAllContributors = () => {
   try {
     return fs.readdirSync("static/contributors/").map((fileName) => {
-      const post = fs.readFileSync(
+      const contributors = fs.readFileSync(
         path.resolve("static/contributors", fileName),
         "utf-8"
       )
-      return grayMatter(post).data
+      return grayMatter(contributors).data
     })
   } catch (e) {
     return []
