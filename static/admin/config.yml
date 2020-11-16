@@ -59,6 +59,7 @@ collections:
         format: "LLL"
         picker_utc: false
       - label: "Featured Image"
+        required: false
         name: "thumbnail"
         widget: "image"
         default: ""
