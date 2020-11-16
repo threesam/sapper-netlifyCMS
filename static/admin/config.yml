@@ -72,7 +72,7 @@ collections:
         collection: "contributor"
         search_fields: ["name"]
         value_field: "name"
-        display_fields: ["image.thumbnail", "name"]
+        display_fields: ["name"]
       - label: "Tag"
         name: "tag"
         widget: "relation"
