@@ -45,7 +45,6 @@ collections:
     fields: # The fields for each document
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
       - label: "Date"
         name: "date"
         widget: "datetime"
@@ -54,6 +53,16 @@ collections:
         time_format: "HH:mm" # e.g. 21:07
         format: "LLL"
         picker_utc: false
+      - label: "Featured Image"
+        name: "thumbnail"
+        widget: "image"
+        default: ""
+        media_library:
+          name: cloudinary
+          config:
+            cloud_name: process.env.CLOUDINARY_NAME
+            api_key: process.env.CLOUDINARY_API_KEY
+      - { label: "Body", name: "body", widget: "markdown" }
       - label: "Contributor Reference"
         name: "contributorReference"
         widget: "relation"
@@ -82,8 +91,10 @@ collections:
         widget: "image"
         default: ""
         media_library:
+          name: cloudinary
           config:
-            multiple: true
+            cloud_name: process.env.CLOUDINARY_NAME
+            api_key: process.env.CLOUDINARY_API_KEY
       - label: "Contributor Reference"
         name: "contributorReference"
         widget: "relation"
@@ -112,5 +123,7 @@ collections:
         widget: "image"
         default: ""
         media_library:
+          name: cloudinary
           config:
-            multiple: true
+            cloud_name: process.env.CLOUDINARY_NAME
+            api_key: process.env.CLOUDINARY_API_KEY
