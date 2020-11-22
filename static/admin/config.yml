@@ -7,6 +7,8 @@ local_backend: true
 publish_mode: editorial_workflow # Allows you to save drafts before publishing them
 public_folder: /uploads # The src attribute for uploaded media will begin with /images/uploads
 media_folder: static/uploads # Media files will be stored in the repo under static/images/uploads
+site_url: https://blog.threesam.com
+logo_url: https://res.cloudinary.com/threesam/image/upload/v1600626345/brooklynMe_qkmyne.jpg
 media_library:
   name: cloudinary
   config:
@@ -80,7 +82,7 @@ collections:
         collection: "tags"
         search_fields: ["title"]
         value_field: "title"
-        display_fields: ["thumbnail", "title"]
+        display_fields: ["title"]
 # projects
   - name: "project"
     label: "Project"
@@ -90,27 +92,32 @@ collections:
       - { label: "Slug", name: "slug", widget: "string"}
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - label: "Featured Image"
-        name: "thumbnail"
-        widget: "image"
-        default: ""
-        media_library:
-          config:
-            multiple: false
+      - label: "Image"
+        name: "image"
+        widget: "object"
+        fields:
+        - label: "Thumbnail"
+          name: "thumbnail"
+          widget: "image"
+          default: ""
+          media_library:
+            config:
+              multiple: true
+        - { label: "Alt", name: "alt", widget: "string" }
       - label: "Contributor Reference"
         name: "contributorReference"
         widget: "relation"
         collection: "contributor"
-        search_fields: ["name"]
-        value_field: "name"
-        display_fields: ["image.thumbnail", "name"]
+        search_fields: ["title"]
+        value_field: "title"
+        display_fields: ["title"]
       - label: "Tag"
         name: "tag"
         widget: "relation"
         collection: "tags"
         search_fields: ["title"]
         value_field: "title"
-        display_fields: ["thumbnail", "title"]
+        display_fields: ["title"]
 # tags
   - name: "tags"
     label: "Tags"
@@ -120,10 +127,15 @@ collections:
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "markdown" }
-      - label: "Featured Image"
-        name: "thumbnail"
-        widget: "image"
-        default: ""
-        media_library:
-          config:
-            multiple: false
+      - label: "Image"
+        name: "image"
+        widget: "object"
+        fields:
+        - label: "Thumbnail"
+          name: "thumbnail"
+          widget: "image"
+          default: ""
+          media_library:
+            config:
+              multiple: true
+        - { label: "Alt", name: "alt", widget: "string" }
