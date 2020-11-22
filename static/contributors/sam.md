@@ -2,7 +2,7 @@
 slug: sam
 title: Sam
 image:
-  thumbnail: https://res.cloudinary.com/threesam/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1600626345/brooklynMe_qkmyne.jpg
+  thumbnail: https://res.cloudinary.com/threesam/image/upload/v1600626345/brooklynMe_qkmyne.jpg
   alt: man standing in front of NYC skyline
 Resume: https://res.cloudinary.com/threesam/image/upload/v1605559546/salvatore_sam_dangelo_resume_dlasav.pdf
 ---
