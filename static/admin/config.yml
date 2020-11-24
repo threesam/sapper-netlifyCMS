@@ -24,6 +24,13 @@ collections:
     fields:
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
+      - label: "BD"
+        name: "birthdate"
+        widget: "datetime"
+        default: ""
+        date_format: "DD.MM.YYYY" # e.g. 24.12.2021
+        time_format: "HH:mm" # e.g. 21:07
+        format: "LLL"
       - label: "Image"
         name: "image"
         widget: "object"
