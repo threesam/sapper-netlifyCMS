@@ -16,10 +16,10 @@ media_library:
     api_key: 464612811924947
 
 collections:
-# contributors
-  - name: "contributor"
-    label: "Contributor"
-    folder: 'static/contributors'
+# fam
+  - name: "fam"
+    label: "Fam"
+    folder: 'static/fam'
     create: true
     fields:
       - { label: "Slug", name: "slug", widget: "string" }
@@ -46,7 +46,7 @@ collections:
             multiple: false
 # posts
   - name: "post" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog Post" # Used in the UI
+    label: "Blog" # Used in the UI
     folder: "static/posts" # The path to the folder where our blog posts are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields for each document
@@ -69,14 +69,14 @@ collections:
           config:
             multiple: false
       - { label: "Body", name: "body", widget: "markdown" }
-      - label: "Contributor Reference"
-        name: "contributorReference"
+      - label: "Fam ->"
+        name: "famRef"
         widget: "relation"
         collection: "contributor"
         search_fields: ["title"]
         value_field: "title"
         display_fields: ["title"]
-      - label: "Tag"
+      - label: "Tag ->"
         name: "tag"
         widget: "relation"
         collection: "tags"
@@ -84,40 +84,7 @@ collections:
         value_field: "title"
         display_fields: ["title"]
 # projects
-  - name: "project"
-    label: "Project"
-    folder: "static/projects"
-    create: true
-    fields:
-      - { label: "Slug", name: "slug", widget: "string"}
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - label: "Image"
-        name: "image"
-        widget: "object"
-        fields:
-        - label: "Thumbnail"
-          name: "thumbnail"
-          widget: "image"
-          default: ""
-          media_library:
-            config:
-              multiple: true
-        - { label: "Alt", name: "alt", widget: "string" }
-      - label: "Contributor Reference"
-        name: "contributorReference"
-        widget: "relation"
-        collection: "contributor"
-        search_fields: ["title"]
-        value_field: "title"
-        display_fields: ["title"]
-      - label: "Tag"
-        name: "tag"
-        widget: "relation"
-        collection: "tags"
-        search_fields: ["title"]
-        value_field: "title"
-        display_fields: ["title"]
+  # not just coding
 # tags
   - name: "tags"
     label: "Tags"
