@@ -15,6 +15,7 @@
 
 <script>
 	export let post;
+	console.log(post)
 </script>
 
 <style>
@@ -63,6 +64,7 @@
 
 <article>
 	<h1>{post.title}</h1>
+	<img src="{post.image}" alt="{post.alt}">
 	
 	<div class="content">
 		{@html post.html}

@@ -76,14 +76,14 @@ collections:
           config:
             multiple: false
       - { label: "Body", name: "body", widget: "markdown" }
-      - label: "Fam ->"
-        name: "famRef"
+      - label: "Author"
+        name: "author"
         widget: "relation"
         collection: "fam"
         search_fields: ["title"]
         value_field: "title"
         display_fields: ["title"]
-      - label: "Tag ->"
+      - label: "Tag"
         name: "tag"
         widget: "relation"
         collection: "tags"
