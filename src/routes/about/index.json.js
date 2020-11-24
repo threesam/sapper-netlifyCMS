@@ -2,14 +2,14 @@ import fs from "fs"
 import path from "path"
 import grayMatter from "gray-matter"
 
-const getAllContributors = () => {
+const getAllFam = () => {
   try {
-    return fs.readdirSync("static/contributors/").map((fileName) => {
-      const contributors = fs.readFileSync(
-        path.resolve("static/contributors", fileName),
+    return fs.readdirSync("static/fam/").map((fileName) => {
+      const fam = fs.readFileSync(
+        path.resolve("static/fam", fileName),
         "utf-8"
       )
-      return grayMatter(contributors).data
+      return grayMatter(fam).data
     })
   } catch (e) {
     return []
@@ -20,6 +20,6 @@ export function get(_, res) {
   res.writeHead(200, {
     "Content-Type": "application/json",
   })
-  const contributors = getAllContributors()
-  res.end(JSON.stringify(contributors))
+  const fam = getAllFam()
+  res.end(JSON.stringify(fam))
 }
