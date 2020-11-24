@@ -1,6 +1,7 @@
 ---
 slug: sam
 title: Sam
+birthdate: December 16, 1990 9:56 AM
 image:
   thumbnail: https://res.cloudinary.com/threesam/image/upload/v1600626345/brooklynMe_qkmyne.jpg
   alt: man standing in front of NYC skyline
