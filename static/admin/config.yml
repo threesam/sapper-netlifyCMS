@@ -79,7 +79,7 @@ collections:
       - label: "Fam ->"
         name: "famRef"
         widget: "relation"
-        collection: "contributor"
+        collection: "fam"
         search_fields: ["title"]
         value_field: "title"
         display_fields: ["title"]
