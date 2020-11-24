@@ -56,6 +56,9 @@
 	article {
 		padding: 2rem;
 	}
+	img {
+		max-width: 100%;
+	}
 </style>
 
 <svelte:head>
@@ -64,7 +67,7 @@
 
 <article>
 	<h1>{post.title}</h1>
-	{#if post.image}
+	{#if post.thumbnail}
 		 <img src="{post.thumbnail}" alt="{post.title}">
 	{/if}
 	
