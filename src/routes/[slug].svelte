@@ -64,7 +64,9 @@
 
 <article>
 	<h1>{post.title}</h1>
-	<img src="{post.image}" alt="{post.alt}">
+	{#if post.image}
+		 <img src="{post.thumbnail}" alt="{post.title}">
+	{/if}
 	
 	<div class="content">
 		{@html post.html}
