@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "me_journal",
+  "description": "journal made with Sapper and NetlifyCMS",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
